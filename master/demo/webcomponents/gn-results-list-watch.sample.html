@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Component Demo</title>
+    <base href="./" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script src="gn-wc.js"></script>
+    <gn-results-list
+      api-url="https://apps.titellus.net/geonetwork/srv/api"
+      size="10"
+      primary-color="#343e9c"
+      layout="TITLE"
+      fixed="true"
+    ></gn-results-list>
+    <div>
+      <button id="changeSizeBtn" onclick="moreRecords()">Load more ...</button>
+    </div>
+  </body>
+  <script>
+    function moreRecords() {
+      const wc = document.getElementsByTagName('gn-results-list')[0]
+      wc.size = parseInt(wc.size) + 10
+    }
+  </script>
+</html>
