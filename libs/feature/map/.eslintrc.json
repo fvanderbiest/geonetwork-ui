@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "geonetwork-ui",
+            "prefix": "gn-ui",
             "style": "kebab-case"
           }
         ]
